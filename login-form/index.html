@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" name="username" id="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+            <div class="remember-check">
+                <label>
+                    <input type="checkbox" name="" id="">Remember Me
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="button" class="btn" onclick="login()">Login</button>
+
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (confirm("Are you sure you want to log in?")) {
+                alert(`Welcome ${username}`);
+                document.getElementById('username').value = '';
+                document.getElementById('password').value = '';
+            } else {
+                alert("Bye-Bye!");
+            }
+        }
+    </script>
+</body>
+</html>
